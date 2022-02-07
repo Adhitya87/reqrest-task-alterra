@@ -18,3 +18,9 @@ Feature: Reqres API
       When user input with email is "eve.holt@reqres.in"
       And password is "cityslicka"
       Then user successes to login and user get token "QpwL5tke4Pnpja7X4"
+
+    @update
+    Scenario: user try to update data
+      When user input name is "morpheus" and job is "zion resident"
+      Then user successes to update
+      And response name is "morpheus" and job is "zion resident" and dateupdate "2022-02-07T09:56:38.715Z"
